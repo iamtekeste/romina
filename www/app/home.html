@@ -1,0 +1,25 @@
+<ion-view view-title="Romina">
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="group-list">
+            <div class="row group-2" ng-repeat="group in menu" ng-if="$index%2 == 0">
+                        <div class="col col-50  group-item" ng-if="$index < menu.length">
+                            <a ng-href="#/app/group/{{menu[$index].slug}}">
+                                 <img width="50" height="50" ng-src="{{menu[$index].image}}">
+                                 <p class="group-name">
+                                     {{menu[$index].name | beautify}}
+                                 </p>
+                             </a>
+                        </div>
+                         <div class="col col-50 group-item" ng-if="$index+1 < menu.length">
+                             <a ng-href="#/app/group/{{menu[$index+1].slug}}">
+                                 <img width="50" height="50"  ng-src="{{menu[$index+1].image}}">
+                                 <p class="group-name">
+                                     {{menu[$index+1].name | beautify}}
+                                 </p>                                    
+                             </a>
+                        </div>
+            </div>
+    </ion-content>
+</ion-view>

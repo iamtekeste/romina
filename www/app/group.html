@@ -1,0 +1,21 @@
+<ion-view view-title="{{groupName | beautify}}">
+    
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="food-list">
+            <div class="row food-item" ng-repeat="food in foods">
+                    <div class="col col-35">
+                        <img ng-src="{{food.image}}">
+                        <p class="food-price">{{food.price}} ETB</p>
+                    </div>
+                    <div class="col col-65 food-name">
+                        {{food.name}}
+                        <p>{{food.ingredients}}</p>
+                    </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
